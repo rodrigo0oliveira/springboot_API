@@ -23,6 +23,7 @@ public class CategoryResource {
 		List<Category> listCategory = categoryService.findAll();
 		return ResponseEntity.ok().body(listCategory);
 	}
+	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Category> findById(@PathVariable Long id){
 		Category category = categoryService.findById(id);
